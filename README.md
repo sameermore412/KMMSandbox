@@ -21,5 +21,8 @@ Jetpack Compose version is set to 1.4.6 and requires kotlin 1.8.20
 
 Jetpack compose has newer versions over compose multiplatform.
 
-#Dependencies
+# Dependencies
 [Compose Multiplatform 1.4.1](https://github.com/JetBrains/compose-multiplatform/releases/tag/v1.4.1)
+
+# Extra Notes
+* To add previews for diffferent platforms you can use @Preview annotated expect/actual functions
