@@ -5,4 +5,21 @@
  * For more detailed information on multi-project builds, please refer to https://docs.gradle.org/8.2.1/userguide/building_swift_projects.html in the Gradle documentation.
  */
 
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+        google()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        google()
+    }
+}
+
 rootProject.name = "KMMSandbox"
+include(":shared-ui")
+include(":sample-app-android")
