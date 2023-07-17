@@ -1,6 +1,6 @@
 plugins {
-    kotlin("multiplatform")
-    id("com.android.library")
+    kotlin("multiplatform") // Multiplatform plugin
+    id("com.android.library") // Needed for android source set
     id("org.jetbrains.compose") // Compose multiplatform plugin
 }
 
@@ -15,8 +15,10 @@ kotlin {
                 jvmTarget = JavaVersion.VERSION_17.toString()
             }
         }
+        //Dependencies just for the android target
         dependencies {
-
+            implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
+            debugImplementation("androidx.compose.ui:ui-tooling:1.4.3")
         }
     }
 
@@ -48,5 +50,8 @@ android {
     compileOptions {
         sourceCompatibility = org.gradle.api.JavaVersion.VERSION_17
         targetCompatibility = org.gradle.api.JavaVersion.VERSION_17
+    }
+    buildFeatures {
+        compose = true //This is enabled to show preview in android source set
     }
 }
