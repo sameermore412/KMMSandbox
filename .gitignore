@@ -32,3 +32,5 @@ build
 .idea/*
 *.hprof
 local.properties
+
+/sample-app-ios/sample-app-ios.xcodeproj/project.xcworkspace/xcuserdata/211197.xcuserdatad/
