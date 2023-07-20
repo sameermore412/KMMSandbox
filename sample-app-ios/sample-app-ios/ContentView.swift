@@ -14,11 +14,12 @@ struct ContentView: View {
             SimpleScreen()
                 .background(Color.red)
             VStack {
+                //Text(IOSPlatform().name)
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)
+                //Text(SharedComposeUI.Sc)
                 ZStack {
-
                     SharedGreeting().background(Color.blue)
                 }.background(Color.red)
             }
