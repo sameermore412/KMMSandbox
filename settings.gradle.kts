@@ -18,3 +18,4 @@ rootProject.name = "KMMSandbox"
 include(":shared-ui")
 include(":sample-app-android")
 include(":shared-data")
+include(":sample-app-desktop")

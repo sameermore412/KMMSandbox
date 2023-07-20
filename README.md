@@ -32,7 +32,8 @@ Jetpack compose has newer versions over compose multiplatform.
 # Extra Notes
 * To add previews for diffferent platforms you can use @Preview annotated expect/actual functions
 * Skiko - Kotlin bindings to Skia which is written in C++. For Desktop, iOS, and Web.
-* 
+* To build desktopJvm application you need to make sure gradle is using a jdk and not a jbr.
+* Desktop composables need to be in a Window composable
 
 
 # Links
@@ -40,4 +41,5 @@ https://github.com/androidx/androidx/tree/androidx-main/compose/ui/ui/src
 https://github.com/JetBrains/compose-multiplatform-core
 https://www.youtube.com/watch?v=FWVi4aV36d8 (Compose on iOS)
 https://www.speedscope.app/ (Profiler info to flamegraphs)
+https://github.com/JetBrains/compose-multiplatform/blob/master/tutorials/Native_distributions_and_local_execution/README.md (Packaging for desktop JVM)
 
