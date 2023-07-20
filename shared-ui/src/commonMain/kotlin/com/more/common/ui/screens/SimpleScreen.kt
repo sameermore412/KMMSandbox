@@ -14,7 +14,7 @@ import com.more.common.ui.widgets.SharedGreeting
 @Composable
 fun SimpleScreen() {
     MaterialTheme {
-        Column(modifier = Modifier.background(Color.Blue)) {
+        Column(modifier = Modifier.background(Color.LightGray)) {
             SharedGreeting()
             MagicLoadingIndicator()
             Button(onClick = {}) {

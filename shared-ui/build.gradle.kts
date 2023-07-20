@@ -44,6 +44,7 @@ kotlin {
                 api(compose.ui)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                implementation(project(":shared-data"))
             }
         }
         val commonTest by getting {
@@ -63,7 +64,6 @@ kotlin {
 
         //Defines a source set called iOSMain that all iOS targets can depend on.
         val iosMain by getting {
-            dependsOn(commonMain)
             iosSimulatorArm64Main.dependsOn(this)
         }
     }
