@@ -5,6 +5,6 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-actual fun PreviewMagicLoadingIndicator() {
+fun PreviewMagicLoadingIndicator() {
     MagicLoadingIndicator()
 }

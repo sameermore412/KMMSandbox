@@ -5,6 +5,6 @@ import androidx.compose.ui.tooling.preview.Preview
 
 @Preview
 @Composable
-actual fun PreviewSharedGreeting() {
+fun PreviewSharedGreeting() {
     SharedGreeting()
 }

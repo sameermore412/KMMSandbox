@@ -14,7 +14,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import kotlin.math.cos
@@ -74,7 +73,3 @@ private fun getCenterFunc(center: Offset, radius: Float): (trigPair: Pair<Float,
 }
 
 fun Float.toRadians() = (this * (kotlin.math.PI/180)).toFloat()
-
-@Preview
-@Composable
-expect fun PreviewMagicLoadingIndicator()

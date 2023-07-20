@@ -13,6 +13,11 @@ plugin on it's own. We are using version "1.8.22" to use a compatible version of
 [KDoctor](https://github.com/Kotlin/kdoctor) is a tool to validate your environment setup for kotlin multiplatform (Java Version, Android Studio, Xcode, Cocoapods). Use
 `brew install kdoctor` to install kdoctor
 
+# Kotlin Multiplatform Android Studio Plugin
+[Kotlin Multiplatform Studio Plugin](https://plugins.jetbrains.com/plugin/14936-kotlin-multiplatform-mobile) is a plugin for android studio that let's you
+run ios App from android studio. Also includes templates for creating multiplatform modules.
+
+
 # Compose multiplatform compatibility
 [Compose Multiplatform Compatibility](https://github.com/JetBrains/compose-multiplatform/blob/master/VERSIONING.md#kotlin-compatibility)
 [Jetpack Compose Compatibility](https://developer.android.com/jetpack/androidx/releases/compose-kotlin)
@@ -26,3 +31,13 @@ Jetpack compose has newer versions over compose multiplatform.
 
 # Extra Notes
 * To add previews for diffferent platforms you can use @Preview annotated expect/actual functions
+* Skiko - Kotlin bindings to Skia which is written in C++. For Desktop, iOS, and Web.
+* 
+
+
+# Links
+https://github.com/androidx/androidx/tree/androidx-main/compose/ui/ui/src
+https://github.com/JetBrains/compose-multiplatform-core
+https://www.youtube.com/watch?v=FWVi4aV36d8 (Compose on iOS)
+https://www.speedscope.app/ (Profiler info to flamegraphs)
+
