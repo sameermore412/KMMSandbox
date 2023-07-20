@@ -10,6 +10,8 @@ kotlin {
     //iOS Targets
     ios()
     iosSimulatorArm64()
+    jvm("desktop")
+
 
     //Android Target
     android {
@@ -66,6 +68,13 @@ kotlin {
         val iosMain by getting {
             iosSimulatorArm64Main.dependsOn(this)
         }
+
+        val desktopMain by getting {
+            dependencies {
+                implementation(compose.desktop.common)
+            }
+        }
+
     }
 }
 
