@@ -1,8 +1,8 @@
 plugins {
     kotlin("multiplatform") // Multiplatform plugin
     kotlin("native.cocoapods") // Cocoapods plugin
-    id("com.android.library") // Needed for android source set
     id("org.jetbrains.compose") // Compose multiplatform plugin
+    id("com.android.library") // Needed for android source set
 }
 
 // kotlin dsl comes from multiplatform plugin
@@ -11,10 +11,13 @@ kotlin {
     ios()
     iosSimulatorArm64()
     jvm("desktop")
+    js(IR) {
+        browser()
+    }
 
 
     //Android Target
-    android {
+    androidTarget {
         compilations.all {
             kotlinOptions {
                 jvmTarget = JavaVersion.VERSION_17.toString()
@@ -46,7 +49,7 @@ kotlin {
                 api(compose.ui)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-                implementation(project(":shared-data"))
+                //implementation(project(":shared-data"))
             }
         }
         val commonTest by getting {
@@ -75,6 +78,18 @@ kotlin {
             }
         }
 
+        val jsWasmMain by creating {
+            dependsOn(commonMain)
+            dependencies {
+                api(compose.ui)
+                api(compose.foundation)
+            }
+        }
+
+        val jsMain by getting {
+            dependsOn(jsWasmMain)
+        }
+
     }
 }
 
@@ -91,4 +106,12 @@ android {
     buildFeatures {
         compose = true //This is enabled to show preview in android source set
     }
+}
+
+
+compose {
+    val composeVersion = project.property("compose.wasm.version") as String
+    kotlinCompilerPlugin.set(composeVersion)
+    val kotlinVersion = project.property("kotlin.version") as String
+    kotlinCompilerPluginArgs.add("suppressKotlinVersionCompatibilityCheck=$kotlinVersion")
 }
