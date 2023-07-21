@@ -17,5 +17,5 @@ target 'sample-app-ios' do
   end
 
   pod 'sharedui', :path => '../shared-ui'
-#   pod 'shareddata', :path => '../shared-data'
+  pod 'shareddata', :path => '../shared-data'
 end

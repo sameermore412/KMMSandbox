@@ -49,7 +49,7 @@ kotlin {
                 api(compose.ui)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
-                //implementation(project(":shared-data"))
+                implementation(project(":shared-data"))
             }
         }
         val commonTest by getting {

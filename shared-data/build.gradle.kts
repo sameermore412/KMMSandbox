@@ -8,7 +8,7 @@ plugins {
 kotlin {
     targetHierarchy.default()
 
-    android {
+    androidTarget() {
         compilations.all {
             kotlinOptions {
                 jvmTarget = JavaVersion.VERSION_17.toString()
@@ -18,6 +18,9 @@ kotlin {
     ios()
     iosSimulatorArm64()
     jvm("desktop")
+    js(IR) {
+        browser()
+    }
 
     cocoapods {
         version = "1.0"
