@@ -2,7 +2,7 @@ plugins {
     kotlin("multiplatform") // Multiplatform plugin
     kotlin("native.cocoapods") // Cocoapods plugin
     id("com.android.library") // Needed for android source set
-    id("org.jetbrains.compose") // Compose multiplatform plugin
+    id("org.jetbrains.compose") version composeVersion // Compose multiplatform plugin
 }
 
 // kotlin dsl comes from multiplatform plugin

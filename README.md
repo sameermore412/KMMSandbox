@@ -3,7 +3,12 @@ A sandbox project for KMM
 
 # Project
 * shared-ui - KMM Module that provides shared widgets
+* shared-data - KMM Module that provides shared data interfaces
 * sample-app-android - Sample Android App
+* sample-app-desktop - Sample JVM desktop app
+* sample-app-ios - Sample iOS app
+* sample-app-web - Sample JS and WASM web apps.
+  * These projects do not depend on shared-ui due to a build issue. Might be fixed when WASM leaves experimental
 
 # Kotlin Gradle Plugin
 The plugin `kotlin("multiplatform")` applies the kotlin multiplatform gradle plugin. This plugin applies the kotlin 
