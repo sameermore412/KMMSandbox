@@ -14,7 +14,6 @@ struct ContentView: View {
             SimpleScreen()
                 .background(Color.red)
             VStack {
-                //Text(IOSPlatform().name)
                 Image(systemName: "globe")
                     .imageScale(.large)
                     .foregroundColor(.accentColor)

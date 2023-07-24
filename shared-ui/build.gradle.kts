@@ -78,18 +78,13 @@ kotlin {
             }
         }
 
-        val jsWasmMain by creating {
+        val jsMain by getting {
             dependsOn(commonMain)
             dependencies {
                 api(compose.ui)
                 api(compose.foundation)
             }
         }
-
-        val jsMain by getting {
-            dependsOn(jsWasmMain)
-        }
-
     }
 }
 
