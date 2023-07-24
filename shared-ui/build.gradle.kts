@@ -10,11 +10,12 @@ kotlin {
     //iOS Targets
     ios()
     iosSimulatorArm64()
+
+    //Desktop JVM Target
     jvm("desktop")
 
-
     //Android Target
-    android {
+    androidTarget() {
         compilations.all {
             kotlinOptions {
                 jvmTarget = JavaVersion.VERSION_17.toString()
@@ -57,8 +58,8 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
-                implementation("androidx.compose.ui:ui-tooling:1.4.3")
+                implementation(compose.uiTooling)
+                implementation(compose.ui)
             }
         }
 
@@ -90,5 +91,9 @@ android {
     }
     buildFeatures {
         compose = true //This is enabled to show preview in android source set
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = composeCompilerVersion
     }
 }
