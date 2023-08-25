@@ -34,6 +34,7 @@ kotlin {
                 api(compose.foundation)
                 api(compose.material)
                 api(compose.ui)
+                //DO NOT ADD shared-ui. Compose WASM does not work at the moment.
             }
         }
 
