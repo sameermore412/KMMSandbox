@@ -15,6 +15,7 @@ kotlin {
                 implementation(compose.material)
                 implementation(compose.foundation)
                 implementation(project(":shared-ui"))
+                implementation("cafe.adriel.voyager:voyager-navigator:$voyagerVersion")
             }
         }
     }

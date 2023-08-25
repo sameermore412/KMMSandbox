@@ -11,7 +11,7 @@ import SwiftUI
 
 struct SimpleScreen: UIViewControllerRepresentable {
     func makeUIViewController(context: Context) -> UIViewController {
-        let controller = SimpleScreen_iosKt.SimpleScreenViewController()
+        let controller = HomeScreenKt.HomeScreenViewController()
         return controller
     }
 

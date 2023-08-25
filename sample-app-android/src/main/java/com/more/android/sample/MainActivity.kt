@@ -14,8 +14,9 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import cafe.adriel.voyager.navigator.Navigator
 import com.more.android.sample.ui.theme.KMMSandboxTheme
-import com.more.common.ui.screens.SimpleScreen
+import com.more.common.ui.screens.HomeScreen
 import com.more.common.ui.widgets.MagicLoadingIndicator
 import com.more.common.ui.widgets.SharedGreeting
 
@@ -27,7 +28,7 @@ class MainActivity : ComponentActivity() {
             KMMSandboxTheme {
                 Scaffold(topBar = customTopAppBar()) { paddingValues ->
                     Box(modifier = Modifier.padding(paddingValues)) {
-                        SimpleScreen()
+                        Navigator(HomeScreen)
                     }
                 }
             }
