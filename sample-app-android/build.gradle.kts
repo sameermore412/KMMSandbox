@@ -5,8 +5,7 @@ plugins {
 
 android {
     namespace = "com.more.android.sample"
-    compileSdk = 33
-
+    compileSdk = 34
     defaultConfig {
         applicationId = "com.more.android.sample"
         minSdk = 24
