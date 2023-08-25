@@ -8,15 +8,16 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
-import com.more.common.ui.screens.SimpleScreen
+import cafe.adriel.voyager.navigator.Navigator
+import com.more.common.ui.screens.HomeScreen
 
 fun main() = application {
     Window(
         title = "Sample App",
         onCloseRequest = ::exitApplication,
     ) {
-       Box(modifier = Modifier.fillMaxSize().background(Color.Blue)) {
-           SimpleScreen()
-       }
+        Box(modifier = Modifier.fillMaxSize().background(Color.Blue)) {
+            Navigator(HomeScreen)
+        }
     }
 }
